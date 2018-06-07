@@ -24,5 +24,10 @@ namespace NiceDream
         {
             InitializeComponent();
         }
+
+        private void ListBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

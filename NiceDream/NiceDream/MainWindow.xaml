@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="667" Width="375">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ListBtn" Click="ListBtn_Click" Margin="250 50 0 450" BorderBrush="Transparent">
+            <Button.Background>
+                <ImageBrush ImageSource="F:\git\nicedream\NiceDream\NiceDream\the moon.bmp" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
