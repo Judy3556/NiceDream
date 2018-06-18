@@ -96,5 +96,8 @@
   <ItemGroup>
     <Resource Include="the moon.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="moon.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
