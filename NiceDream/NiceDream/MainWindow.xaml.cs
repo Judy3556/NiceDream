@@ -29,5 +29,10 @@ namespace NiceDream
         {
 
         }
+
+        private void TitlrBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
