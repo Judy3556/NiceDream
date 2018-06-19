@@ -30,9 +30,29 @@ namespace NiceDream
 
         }
 
-        private void TitlrBox_MouseMove(object sender, MouseEventArgs e)
+        private void SizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.DragMove();
+
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Textarea.Text = " ";
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DateTb.Text = DateTime.Today.ToLongDateString();
         }
     }
 }
