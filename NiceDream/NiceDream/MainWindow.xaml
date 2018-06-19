@@ -25,12 +25,12 @@
 
         <!--標題欄-->
         <Border x:Name="TitlrBox"  Grid.Column="0" Background="#FFF2FDC1" CornerRadius="15,0,0,0" Grid.ColumnSpan="2">
-            <TextBlock x:Name="DateTb" Margin="200 5 20 0" FontSize="15" Foreground="Gray" HorizontalAlignment="Right"></TextBlock>
+            <TextBlock x:Name="DateTb" MouseLeftButtonDown="DateTb_MouseLeftButtonDown" Margin="200 5 20 0" FontSize="15" Foreground="Gray" HorizontalAlignment="Right"></TextBlock>
         </Border>
 
         <!--內容-->
         <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" CornerRadius="0 0 0 15"  Background="#FFF2FDC1">
-            <TextBox x:Name="Textarea" Margin="20"  Background="#FFF2FDC1" BorderBrush="Transparent" FontSize="20" Opacity="1"  AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+            <TextBox x:Name="Textarea" Margin="20"  Background="#FFF2FDC1" BorderBrush="Transparent" FontSize="15" Opacity="1"  AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
         </Border>
 
         <!--邊緣按鈕-->
@@ -50,7 +50,7 @@
                     <ImageBrush ImageSource="F:\git\nicedream\NiceDream\NiceDream\moon.bmp" />
                 </Button.Background>
                 <Menu>
-                    <MenuItem Header="_ListWindow" Foreground="Transparent" Background="Transparent"></MenuItem>
+                    <MenuItem Header="_ListWindow" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent" ></MenuItem>
                 </Menu>
             </Button>
         </Border>
@@ -58,7 +58,7 @@
         <!--列表框按鈕-->
         <Border Grid.Column="2" Grid.Row="2" CornerRadius="0,0,0,15">
             <StackPanel Orientation="Vertical">
-                <Slider x:Name="SizeSlider" ValueChanged="SizeSlider_ValueChanged" Margin="20 20 20 20" Height="300" Orientation="Vertical">
+                <Slider x:Name="SizeSlider" ValueChanged="SizeSlider_ValueChanged" Minimum="15" Maximum="50" TickFrequency="1" IsSnapToTickEnabled="True" Margin="20 20 20 20" Height="300" Orientation="Vertical">
                     
                 </Slider>
                 <Button x:Name="RemoveBtn" Click="RemoveBtn_Click" Margin="0 20 0 10 " Background="Transparent" Foreground="White" BorderBrush="Transparent">清空</Button>

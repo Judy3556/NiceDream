@@ -32,7 +32,10 @@ namespace NiceDream
 
         private void SizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            if (IsInitialized == true)
+            {
+                Textarea.FontSize = SizeSlider.Value;
+            }
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
@@ -47,12 +50,22 @@ namespace NiceDream
 
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)
         {
-            Textarea.Text = " ";
+            Textarea.Text = "";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DateTb.Text = DateTime.Today.ToLongDateString();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DateTb_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
