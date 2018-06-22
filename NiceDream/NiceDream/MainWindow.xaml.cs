@@ -24,6 +24,7 @@ namespace NiceDream
         string newFileName = "";
         string saveText = "";
         string thisText = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,7 +44,8 @@ namespace NiceDream
         }
         private void ListBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            ListWindow window2 = new ListWindow();
+            window2.Show();
         }
 
         private void SizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

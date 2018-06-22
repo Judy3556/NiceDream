@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NiceDream"
         mc:Ignorable="d"
-        Title="ListWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="ListWindow" Height="667" Width="375">
+    <Grid x:Name="Page2">
+        <Button>HI</Button>
     </Grid>
 </Window>

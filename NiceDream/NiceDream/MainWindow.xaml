@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NiceDream"
         mc:Ignorable="d"
         Title="MainWindow" Loaded="Window_Loaded" Height="667" Width="375" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Grid>
+    <Grid x:Name="Page1" Height="667" VerticalAlignment="Bottom">
         <Grid.Effect>
             <DropShadowEffect  Opacity="0.25" Direction="-90" Color="#FF000000" BlurRadius="20" ShadowDepth="10"></DropShadowEffect>
         </Grid.Effect>
@@ -49,9 +49,7 @@
                 <Button.Background>
                     <ImageBrush ImageSource="F:\git\nicedream\NiceDream\NiceDream\moon.bmp" />
                 </Button.Background>
-                <Menu>
-                    <MenuItem Header="_ListWindow" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent" ></MenuItem>
-                </Menu>
+
             </Button>
         </Border>
 
