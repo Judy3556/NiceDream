@@ -23,5 +23,18 @@ namespace NiceDream
         {
             InitializeComponent();
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window1 = new MainWindow();
+            window1.Show();
+            this.Close();
+        }
+
+        // 關閉視窗按鈕
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

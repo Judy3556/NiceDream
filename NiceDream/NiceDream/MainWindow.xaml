@@ -45,7 +45,7 @@
             </Border.Background>
 
             <!--彈出窗口按鈕-->
-            <Button x:Name="ListBtn" Click="ListBtn_Click" Margin="0 10 0 605" BorderBrush="Transparent">
+            <Button x:Name="ListBtn" Click="ListBtn_Click" Margin="0 10 0 605" BorderBrush="Transparent" Opacity="0.5">
                 <Button.Background>
                     <ImageBrush ImageSource="F:\git\nicedream\NiceDream\NiceDream\moon.bmp" />
                 </Button.Background>
