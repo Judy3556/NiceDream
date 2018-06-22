@@ -42,7 +42,8 @@ namespace NiceDream
         {
             TodoItem item = new TodoItem();
             TodoitemList.Children.Add(item);
-
+            MainWindow world = new MainWindow();
+            item.TimeBox.Text = world.Textarea.Text;
         }
     }
 }
