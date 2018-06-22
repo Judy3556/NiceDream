@@ -20,11 +20,27 @@ namespace NiceDream
     /// </summary>
     public partial class MainWindow : Window
     {
+        string fileName = "";
+        string newFileName = "";
+        string saveText = "";
+        string thisText = "";
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        void Save()
+        {
+            Microsoft.Win32.SaveFileDialog dig = new Microsoft.Win32.SaveFileDialog();
+            Nullable<bool> result = dig.ShowDialog();
+            if (result == true)
+            {
+                System.IO.File.WriteAllText(dig.FileName, Textarea.Text);
+                fileName = dig.FileName;
+                saveText = thisText;
+                
+            }
+        }
         private void ListBtn_Click(object sender, RoutedEventArgs e)
         {
 
@@ -45,7 +61,16 @@ namespace NiceDream
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            string data = "";
+            if (fileName == newFileName)
+            {
+                Save();
+            }
+            else
+            {
+                System.IO.File.WriteAllText(fileName, Textarea.Text);
+                saveText = thisText;
+            }
         }
 
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)
