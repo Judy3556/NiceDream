@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace NiceDream
 {
+    
     /// <summary>
     /// ListWindow.xaml 的交互逻辑
     /// </summary>
@@ -35,6 +36,13 @@ namespace NiceDream
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TodoItem item = new TodoItem();
+            TodoitemList.Children.Add(item);
+
         }
     }
 }

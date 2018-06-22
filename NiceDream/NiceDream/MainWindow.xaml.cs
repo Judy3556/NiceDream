@@ -22,8 +22,9 @@ namespace NiceDream
     {
         string fileName = "";
         string newFileName = "";
-        string saveText = "";
+        public string saveText = "";
         string thisText = "";
+        public string time;
 
         public MainWindow()
         {
@@ -39,6 +40,7 @@ namespace NiceDream
                 System.IO.File.WriteAllText(dig.FileName, Textarea.Text);
                 fileName = dig.FileName;
                 saveText = thisText;
+                
                 
             }
         }
@@ -65,6 +67,7 @@ namespace NiceDream
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             string data = "";
+            time = DateTb.Text;
             if (fileName == newFileName)
             {
                 Save();
@@ -74,6 +77,9 @@ namespace NiceDream
                 System.IO.File.WriteAllText(fileName, Textarea.Text);
                 saveText = thisText;
             }
+
+
+
         }
 
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)
