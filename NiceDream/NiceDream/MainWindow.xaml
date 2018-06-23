@@ -63,6 +63,7 @@
                     
                 </Slider>
                 <Button x:Name="RemoveBtn" Click="RemoveBtn_Click" Margin="0 20 0 10 " Background="Transparent" Foreground="White" BorderBrush="Transparent">清空</Button>
+                <Button x:Name="OpenBtn" Click="OpenBtn_Click" Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White">打開</Button>
                 <Button x:Name="SaveBtn" Click="SaveBtn_Click" Height="30" Background="Transparent" BorderBrush="Transparent" Foreground="White">儲存</Button>
                 <Button x:Name="ExitBtn" Click="ExitBtn_Click" Height="50" Background="Transparent" BorderBrush="Transparent" Foreground="White">退出</Button>
             </StackPanel>

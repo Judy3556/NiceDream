@@ -49,7 +49,11 @@ namespace NiceDream
 
         private void ListTitle_Loaded(object sender, RoutedEventArgs e)
         {
-
+            MainWindow maintxt = new MainWindow();
+            foreach (TodoItem item in TodoitemList.Children)
+            {
+                item.NameBox.Text = maintxt.Textarea.Text;
+            }
            
 
         }

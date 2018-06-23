@@ -61,7 +61,7 @@ namespace NiceDream
         {
             ListWindow window2 = new ListWindow();
             window2.Show();
-            this.Close();
+
         }
 
         private void SizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -104,6 +104,27 @@ namespace NiceDream
         private void DateTb_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void OpenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (saveText != thisText)
+            {
+                if (MessageBox.Show("Do you want to Save?", "Save or Not", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    Save();
+                    Open();
+                }
+                else
+                {
+                    Open();
+                }
+            
+            }
+            else
+            {
+                Open();
+            }
         }
     }
 }
