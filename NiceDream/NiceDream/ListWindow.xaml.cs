@@ -20,6 +20,7 @@ namespace NiceDream
     /// </summary>
     public partial class ListWindow : Window
     {
+        public int count = 0;
         public ListWindow()
         {
             InitializeComponent();
@@ -36,14 +37,21 @@ namespace NiceDream
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
             TodoItem item = new TodoItem();
             TodoitemList.Children.Add(item);
-            MainWindow world = new MainWindow();
-            item.TimeBox.Text = world.Textarea.Text;
+            count++;
+        }
+
+        private void ListTitle_Loaded(object sender, RoutedEventArgs e)
+        {
+
+           
+
         }
     }
 }

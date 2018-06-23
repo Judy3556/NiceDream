@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NiceDream"
         mc:Ignorable="d"
-        Title="ListWindow" Height="667" Width="375" Background="Transparent" WindowStyle="None" AllowsTransparency="True">
+        Title="ListWindow" x:Name="ListTitle" Loaded="ListTitle_Loaded" Height="667" Width="375" Background="Transparent" WindowStyle="None" AllowsTransparency="True">
     <Grid >
         
         <!--格式-->

@@ -24,7 +24,7 @@ namespace NiceDream
         string newFileName = "";
         public string saveText = "";
         string thisText = "";
-        public string time;
+        public string nowtime;
 
         public MainWindow()
         {
@@ -40,8 +40,21 @@ namespace NiceDream
                 System.IO.File.WriteAllText(dig.FileName, Textarea.Text);
                 fileName = dig.FileName;
                 saveText = thisText;
+                TitlenameTxt.Text = dig.SafeFileName + ",txt";
+            }
+        }
 
-                
+        void Open()
+        {
+            Microsoft.Win32.OpenFileDialog dig = new Microsoft.Win32.OpenFileDialog();
+            Nullable<bool> result = dig.ShowDialog();
+            if (result == true)
+            {
+                Textarea.Text = System.IO.File.ReadAllText(dig.FileName);
+                fileName = dig.FileName;
+                saveText = Textarea.Text;
+                TitlenameTxt.Text = dig.SafeFileName + ",txt";
+
             }
         }
         private void ListBtn_Click(object sender, RoutedEventArgs e)
@@ -66,11 +79,15 @@ namespace NiceDream
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            string data = "";
-            
-
-
-
+            if (fileName == newFileName)
+            {
+                Save();
+            }
+            else
+            {
+                System.IO.File.WriteAllText(fileName, Textarea.Text);
+                saveText = thisText;
+            }
 
         }
 
@@ -82,11 +99,6 @@ namespace NiceDream
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DateTb.Text = DateTime.Today.ToLongDateString();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void DateTb_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

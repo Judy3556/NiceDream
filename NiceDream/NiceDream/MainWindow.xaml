@@ -25,7 +25,10 @@
 
         <!--標題欄-->
         <Border x:Name="TitlrBox"  Grid.Column="0" Background="#FFF2FDC1" CornerRadius="15,0,0,0" Grid.ColumnSpan="2">
-            <TextBlock x:Name="DateTb" MouseLeftButtonDown="DateTb_MouseLeftButtonDown" Margin="200 5 20 0" FontSize="15" Foreground="Gray" HorizontalAlignment="Right"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="TitlenameTxt" Width=" 170" Margin="15 0"></TextBlock>
+            <TextBlock x:Name="DateTb" MouseLeftButtonDown="DateTb_MouseLeftButtonDown" Width="140" FontSize="15" Foreground="Gray" HorizontalAlignment="Right"></TextBlock>
+            </StackPanel>
         </Border>
 
         <!--內容-->
