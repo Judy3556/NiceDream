@@ -24,6 +24,12 @@ namespace NiceDream
         public ListWindow()
         {
             InitializeComponent();
+            MusicMe.MediaEnded += MusicMe_MediaEnded;
+        }
+
+        private void MusicMe_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            MusicMe.Play();
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
@@ -50,10 +56,7 @@ namespace NiceDream
         private void ListTitle_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow maintxt = new MainWindow();
-            foreach (TodoItem item in TodoitemList.Children)
-            {
-                item.NameBox.Text = maintxt.Textarea.Text;
-            }
+
            
 
         }

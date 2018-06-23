@@ -118,5 +118,8 @@
   <ItemGroup>
     <Resource Include="halfmoon.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Wildest Dreams.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

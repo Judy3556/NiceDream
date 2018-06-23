@@ -43,7 +43,10 @@
             <Button x:Name="CloseBtn" Click="CloseBtn_Click" Margin="10" Background="Transparent" BorderBrush="Transparent" Foreground="White" HorizontalAlignment="Left"> 退出</Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" x:Name="TodoitemList"></StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" x:Name="TodoitemList">
+            <MediaElement x:Name="MusicMe" Visibility="Hidden" LoadedBehavior="Manual" Volume="0.8" Source="F:\git\nicedream\NiceDream\NiceDream\Wildest Dreams.mp3"></MediaElement>
+
+        </StackPanel>
 
     </Grid>
 </Window>
