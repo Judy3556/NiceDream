@@ -61,7 +61,7 @@ namespace NiceDream
         {
             ListWindow window2 = new ListWindow();
             window2.Show();
-
+            this.Close();
         }
 
         private void SizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

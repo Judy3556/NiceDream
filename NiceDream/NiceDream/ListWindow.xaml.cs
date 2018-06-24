@@ -46,12 +46,6 @@ namespace NiceDream
 
         }
 
-        private void AddBtn_Click(object sender, RoutedEventArgs e)
-        {
-            TodoItem item = new TodoItem();
-            TodoitemList.Children.Add(item);
-            count++;
-        }
 
         private void ListTitle_Loaded(object sender, RoutedEventArgs e)
         {
@@ -60,5 +54,32 @@ namespace NiceDream
            
 
         }
+
+        private void PlayerPause()
+        {
+            if (PLayBtn.Content.ToString() == "Play")
+            {
+                MusicMe.Play();
+                PLayBtn.Content = "Pause";
+                MusicMe.ToolTip = "Click to Pause";
+            }
+            else
+            {
+                MusicMe.Pause();
+                PLayBtn.Content = "Play";
+                MusicMe.ToolTip = "Click to Play";
+            }
+        }
+
+        private void PLayBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerPause();
+        }
+
+        private void MusicMe_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
     }
 }
